@@ -1,8 +1,8 @@
 import cv2
 from base_camera import BaseCamera
 import numpy as np
-
-face_cascade = cv2.CascadeClassifier('/home/paul/Desktop/Work/UI/Site/haarcascade_frontalcatface.xml')
+import os
+face_cascade = cv2.CascadeClassifier(os.path.abspath('haarcascade_frontalcatface.xml')
 
 class Camera(BaseCamera):
     status = None
