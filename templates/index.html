@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	<div class="container ">
+		<div class="row m-4">
+			
+            <div class="col-md-6 p-2">
+                <img src="{{ url_for('video_feed') }}">
+            </div>
+            <hr>
+            
+            <form action={{ url_for('index')}} method="POST">
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <div class="form-check">
+                            <input name='check1' class="form-check-input .active" type="checkbox" value="1" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Face Detection
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input name='check2' class="form-check-input" type="checkbox" id="inlineCheckbox1" value="1">
+                            <label class="form-check-label" for="inlineCheckbox1">
+                                Eye Detection
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input name='check3' class="form-check-input" type="checkbox" id="inlineCheckbox2" value="1">
+                            <label class="form-check-label" for="inlineCheckbox2">
+                                Detect Both
+                            </label>
+                        </div>
+                    </div>
+                    <input type="submit">
+                </div>
+            </form>
+
+
+		</div>
+	</div>
+{% endblock %}
